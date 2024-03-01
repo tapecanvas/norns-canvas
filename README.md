@@ -18,7 +18,9 @@
   - [ ] copy/paste
   - [ ] keyboard control (3 keys are not enough) 
   - [ ] inport png / collage
-  - [ ] another script idea, but a gallery to display canvas screenshots
+  - [ ] another script idea, but a gallery to display canvas screenshots, could build the basic functionality in a second page of this script
+  - [ ] audio output / input (hmmm...)
+  - [ ] param to purge /data/norns-canvas/ folder 
 
 
 ## archive
