@@ -13,7 +13,7 @@
 - k1+k3: clear screen
 
 ## to-do:
-- [ ] optimize drawing (prevent screen Q errors)
+- [ ] optimize drawing (try to prevent as many "warning: screen event Q full!" errors/glitches)
 - [ ] extend (these may not be possible)
   - [ ] copy/paste
   - [ ] keyboard control (3 keys are not enough) 
