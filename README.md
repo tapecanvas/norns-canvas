@@ -1,6 +1,8 @@
 # norns-canvas
  WIP - pixel art for norns
 
+![buncha pixels on the screen](screenshot.png)
+
 ## controls:
 - v0.0.1
 - e2: move cursor x
