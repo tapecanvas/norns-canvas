@@ -20,12 +20,13 @@
   - [ ] copy/paste
   - [ ] keyboard control (3 keys are not enough) 
   - [ ] inport png / collage
-  - (started) another script idea -> a gallery to display canvas screenshots (see galleryXY.lua)
   - [ ] audio output / input (hmmm...)
-- [ ] param to purge /data/norns-canvas/ screenshot folder
+- [ ] param to purge /data/norns-canvas/ screenshot folder (maybe not if i can work in editing to gallery script)
+- [ ] make pixel/xy info display a param (on/off
 - [ ] make screenshot type/size a param option (see screenshot docs)
 
 ## archive
+- (started) another script idea -> a gallery to display canvas screenshots (see galleryXY.lua) and norns-gallery
 - 2d array for pixels
 - remove filename display
 - started gallery script
