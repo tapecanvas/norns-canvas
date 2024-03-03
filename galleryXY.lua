@@ -6,12 +6,13 @@
 
 local fileselect = require 'fileselect'
 -- images should be stored in data. starting in /dust just makes it easier to understand where you are
-local folder_path = _path.dust
+local folder_path = 'none'
 local png_file = nil
+local  cursor = {0,0}
 
 function init()
   screen.aa(0)
-  fileselect.enter(folder_path, png_selected)
+  fileselect.enter(_path.data, png_selected)
   cursor = { x = 0, y = 0 }
 end
 
@@ -19,6 +20,13 @@ function redraw()
   screen.clear()
   if png_file then
     screen.display_png(png_file, cursor.x, cursor.y)
+    else
+    screen.level(15)
+    screen.move(17,30)
+    screen.font_size(12)
+    screen.text("gallery closed")
+    screen.move(15,45)
+    screen.text("for renovation")
   end
   screen.update()
 end
@@ -26,14 +34,17 @@ end
 function png_selected(file)
   if file ~= "cancel" then
     png_file = file
+    screen.update()
     redraw()
   end
+  
 end
 
 -- k3 opens the file select dialog
 function key(n, z)
   if n == 3 and z == 1 then
-    fileselect.enter(folder_path, png_selected)
+    fileselect.enter("/home/we/dust/data/norns-canvas/", png_selected)
+    cursor={x=0,y=0} -- reset xy position 
   end
 end
 
