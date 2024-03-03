@@ -34,7 +34,7 @@ function redraw()
   end
   --screen.move(0,62)
   --screen.text(tostring(tab[index])) -- display file name bottom left
-  screen.update()
+  --screen.update()
 end
 
 function enc(n,d)
