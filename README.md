@@ -2,6 +2,7 @@
  WIP - pixel art for norns
 
 ![screenshot](screenshot.png)
+![gallery gif](gallery.gif)
 
 ## controls:
 - v0.0.2
