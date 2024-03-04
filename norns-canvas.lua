@@ -1,5 +1,5 @@
 -- norns-canvas
--- v0.0.2
+-- v0.0.2a
 -- by @tapecanvas
 -- pixel art for norns
 -- e2: move cursor x
@@ -8,7 +8,7 @@
 -- k3: remove pixels
 -- k3+k2: take screenshot
 -- k1+k3: clear screen
--- screenshots are saved in /dust/data/norns-canvas
+-- screenshots are saved in /dust/data/norns-canvas/png/
 
 -- initialize cursor position
 cursor = { x = 64, y = 32 }
@@ -25,7 +25,11 @@ local fn = os.date("%y.%m.%d_%H.%M.%S")
 -- screenshot
 function take_screenshot()
   fn = os.date("%y.%m.%d_%H.%M.%S")
-  _norns.screen_export_png("/home/we/dust/data/norns-canvas/" .. fn .. ".png") -- small transparent screenshot
+  export_dir = "/home/we/dust/data/norns-canvas/png/"
+  if not util.file_exists(export_dir) then
+    os.execute("mkdir " .. export_dir)
+  end 
+  _norns.screen_export_png(export_dir .. fn .. ".png") -- small transparent screenshot
   -- screen.export_screenshot(fn) -- big screenshot
 
   -- draw screenshot effect,

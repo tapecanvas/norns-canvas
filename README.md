@@ -15,6 +15,7 @@
 - screenshots are saved in /dust/data/norns-canvas
 
 ## to-do:
+#### norns-canvas
 - [ ] optimize drawing (try to prevent as many "warning: screen event Q full!" errors/glitches)
 - [ ] extend (these may not be possible)
   - [ ] copy/paste
@@ -24,8 +25,17 @@
 - [ ] param to purge /data/norns-canvas/ screenshot folder (maybe not if i can work in editing to gallery script)
 - [ ] make pixel/xy info display a param (on/off
 - [ ] make screenshot type/size a param option (see screenshot docs)
+- [ ] save screenshots to /data/norns-canvas/png or fix gallery to not try to display folders from inside data folder (galleryxy, norns-gallery, etc) - these seem to repopulate 
+#### norns-gallery
+- [ ] option to hide display info
+- [ ] save settings/galleries as params so psets work
+- [ ] add option to delete images
 
 ## archive
+- gallery: add "no images in gallery dir" splash screen
+- gallery: create default gallery dir if it doesn't exist
+- gallery: add multiple directory support k3 to add dir and k2 to switch between dir
+- update norns-canvas screenshot dir
 - (started) another script idea -> a gallery to display canvas screenshots (see galleryXY.lua) and norns-gallery
 - 2d array for pixels
 - remove filename display
@@ -33,10 +43,10 @@
 - change screenshot to non-upscaled -> [norns screenshot docs](https://monome.org/docs/norns/help/data/#png)
 - add wip screenshot
 - k1+k3 clear screen
-- multiple delete
+- multiple delete (hold k3)
 - update date+time after a screenshot is taken
 - date+time screenshot filename
 - screenshot function
 - add pixel count
 - visible cursor
-- single/multiple draw
+- single/multiple draw (tap/hold k2)
