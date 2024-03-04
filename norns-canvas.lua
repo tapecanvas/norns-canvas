@@ -60,7 +60,7 @@ end
 function redraw()
   -- clear the screen
   screen.clear()
-
+  screen.blend_mode(1) -- 1 XOR: clears any overlapping pixels.
   -- draw all pixels
   for key, pixel in pairs(pixels) do
     screen.level(15)
