@@ -60,7 +60,6 @@ end
 function redraw()
   -- clear the screen
   screen.clear()
-  screen.blend_mode(1) -- 1 XOR: clears any overlapping pixels.
   -- draw all pixels
   for key, pixel in pairs(pixels) do
     screen.level(15)
@@ -73,16 +72,16 @@ function redraw()
   screen.pixel(cursor.x, cursor.y)
   screen.fill()
 
-  -- file, pixel, and cursor info display
-  screen.level(15)
-  screen.font_face(68)
-  screen.font_size(8)
-  screen.move(77, 62)
-  screen.text("p" .. get_map_size(pixels))
-  screen.move(98, 62)
-  screen.text("x" .. cursor.x)
-  screen.move(115, 62)
-  screen.text("y" .. cursor.y)
+  -- pixel, and cursor info display
+  -- screen.level(15)
+  -- screen.font_face(68)
+  -- screen.font_size(8)
+  -- screen.move(77, 62)
+  -- screen.text("p" .. get_map_size(pixels))
+  -- screen.move(98, 62)
+  -- screen.text("x" .. cursor.x)
+  -- screen.move(115, 62)
+  -- screen.text("y" .. cursor.y)
 
   -- Update the screen
   screen.update()
@@ -105,7 +104,9 @@ function enc(n, delta)
 
   -- encoder 3 changes the y position
   if n == 3 then
-    cursor.y = util.clamp(cursor.y + delta, 0, 55)
+    -- cursor.y = util.clamp(cursor.y + delta, 0, 55)
+    cursor.y = util.clamp(cursor.y + delta, 0, 63)
+
   end
 
   -- start the redraw loop if it's not already running and an encoder was turned
@@ -130,7 +131,7 @@ function handle_key_press(key_pressed, clock_id, action)
       clock_id = clock.run(function()
         while key_pressed do
           action()
-          clock.sleep(1 / 100) -- place pixels at n times per second
+          clock.sleep(1 / 120) -- place pixels at n times per second
         end
       end)
     end
