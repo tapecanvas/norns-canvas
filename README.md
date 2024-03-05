@@ -12,7 +12,7 @@
 - k3: remove pixels (press/hold)
 - k3+k2: take screenshot 
 - k1+k3: clear screen
-- screenshots are saved in /dust/data/norns-canvas
+- screenshots are saved in /dust/data/norns-canvas/png/
 
 ## to-do:
 #### norns-canvas
