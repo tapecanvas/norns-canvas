@@ -30,6 +30,7 @@
 - [ ] option to hide display info
 - [ ] save settings/galleries as params so psets work
 - [ ] add option to delete images
+- [ ] use listselect to choose directory instead of fileselect
 
 ## archive
 - gallery: add "no images in gallery dir" splash screen
